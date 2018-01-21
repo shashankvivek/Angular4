@@ -1,0 +1,17 @@
+<div *ngIf="empArray$ | async as empData">
+    <span *ngIf="empData.loading">Loading Info..</span>
+    <table *ngIf="empData.data.length > 0" border="1">
+        <tr *ngFor="let emp of empData.data" >
+            <td >
+                {{emp.id}}
+            </td>
+            <td>
+                {{emp.first_name+' '+emp.last_name}}
+            </td>
+            <td>
+                {{emp.email}}
+            </td>
+        </tr>
+    </table>
+    
+</div>
