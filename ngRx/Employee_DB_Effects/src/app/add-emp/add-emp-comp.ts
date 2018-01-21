@@ -1,8 +1,10 @@
 import { Component } from "@angular/core";
 import { IEmployee, emptyEmp } from "app/models/emp.model";
-import { OnInit } from "@angular/core/src/metadata/lifecycle_hooks";
-import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { OnInit } from "@angular/core";
 import { EmployeeService } from "app/emp.svc";
+import { Store } from "@ngrx/store";
+import * as AllEmpActions from 'app/action/emp.action';
+import { Observable } from "rxjs/Observable";
 
 @Component({
     selector: 'add-emp',
@@ -12,12 +14,19 @@ import { EmployeeService } from "app/emp.svc";
 export class AddEmpComponent implements OnInit {
 
     emp: IEmployee = emptyEmp;
+    success : boolean = false;
+    saved_success$ : Observable<IEmployee>;
 
-    constructor(private http: HttpClient,private empSvc: EmployeeService ) { }
+    constructor(private empSvc: EmployeeService,private store: Store<any> ) {
+        this.store.select('post')
+            .subscribe(res =>{
+                this.success = res.success;
+                this.emp = { id: 0, first_name: '', email: '', last_name: '' };
+            })
+     }
 
     addEmp() {
-        this.empSvc.addEmployee(this.emp)
-            .subscribe(success => {console.log('success')},error => {console.error('error')});
+        this.store.dispatch(new AllEmpActions.save_emp(this.emp));
     }
 
     ngOnInit() {

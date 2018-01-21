@@ -17,6 +17,7 @@ export class EmployeeService {
     }
 
     addEmployee(emp: IEmployee){
+        console.log(emp);
         return this.http.post(
             'http://localhost:3000/employees',
             emp,
