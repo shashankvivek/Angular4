@@ -1,4 +1,4 @@
-# Example App: Zoo Animals
+# Example App: Practice
 
 [![CircleCI](https://circleci.com/gh/angular-redux/example-app.svg?style=svg)](https://circleci.com/gh/angular-redux/example-app)
 
