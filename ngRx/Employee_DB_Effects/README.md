@@ -1,16 +1,15 @@
 # Example App: Practice
 
-[![CircleCI](https://circleci.com/gh/angular-redux/example-app.svg?style=svg)](https://circleci.com/gh/angular-redux/example-app)
+[![CircleCI](https://circleci.com/gh/angular-redux/example-app.svg?style=svg)]
+#(https://circleci.com/gh/angular-redux/example-app)
 
 This is a sample project showing how the following packages work together to make a simple
 application.
 
-* [redux](https://github.com/reactjs/redux) Predictable state container for Javascript.
+* [@ngRx](https://github.com/ngrx/platform) Predictable state container for Javascript.
 * [redux-observable](https://github.com/redux-observable/redux-observable) Side-effect handling with Observables
-* [@angular-redux/store](https://github.com/angular-redux/store) Redux + Angular bindings
-* [@angular-redux/router](https://github.com/angular-redux/router) Time travel with the Angular router
-* [@angular-redux/form](https://github.com/angular-redux/form) Time travel with Angular forms
-* [Redux DevTools Chrome Extension](https://github.com/zalmoxisus/redux-devtools-extension)
+* [@ngrx/store](https://github.com/ngrx/platform/blob/master/docs/store/README.md) Redux + Angular bindings
+* [@ngrx/effects](https://github.com/ngrx/platform/blob/master/docs/effects/README.md) Effects in ngRx
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
 
@@ -25,14 +24,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
 
 ## Further help
 
