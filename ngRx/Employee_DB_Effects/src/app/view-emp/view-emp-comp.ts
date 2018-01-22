@@ -1,5 +1,4 @@
-import { Component } from "@angular/core";
-import { OnInit } from "@angular/core";
+import { Component,OnInit } from "@angular/core";
 import { IEmployee } from "app/models/emp.model";
 import { Store } from "@ngrx/store";
 import * as AllEmpAction from "app/action/emp.action";
@@ -13,7 +12,8 @@ import 'rxjs/add/observable/empty';
 
 export class ViewEmpComponent implements OnInit {
 
-    empArray$: Observable<IEmployee[]> = Observable.empty();
+    empArray$: Observable<IEmployee[]>;
+    
     constructor(private store: Store<any>) {
         this.empArray$ = this.store.select('post');
      }
@@ -21,4 +21,5 @@ export class ViewEmpComponent implements OnInit {
     ngOnInit() {
         this.store.dispatch(new AllEmpAction.fetch_emp())
     }
+
 }
