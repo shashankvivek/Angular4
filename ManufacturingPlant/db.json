@@ -1,0 +1,20 @@
+{ 
+  "navList": [
+    {
+      "id": "cat1",
+	  "route" : "matdef",
+      "name": "Material Definition"
+    },
+    {
+      "id": "cat2",
+	  "route" : "proc",
+      "name": "Process"
+    }
+  ],
+  "material_definition":[
+	{
+		"id": 1,
+		"name" : "Some Material Definition"
+	}
+  ]
+}

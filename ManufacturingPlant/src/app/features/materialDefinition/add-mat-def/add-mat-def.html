@@ -1,0 +1,25 @@
+<form [formGroup]="rForm" (ngSubmit)="addToMatDef(rForm.value)">
+    <div class="form-container">
+        <div class="row columns">
+            ID : <input type="text" formControlName="id"/>
+            <div *ngIf="!rForm.controls['id'].valid && rForm.controls['id'].touched">Invalid data</div>
+            <p></p>
+            Name: <input type="text" formControlName="name"/>
+            <div *ngIf="!rForm.controls['name'].valid && rForm.controls['name'].touched">Provide data</div>
+            <p></p>
+            Desc: <textarea formControlName='description' name="textar"></textarea>
+            <div *ngIf="!rForm.controls['description'].valid && rForm.controls['description'].touched">{{alertData}}</div>
+            <p></p>
+            Make Desc Mandata: <input type="checkbox" formControlName='mandateDesc'/>
+        </div>
+    </div>
+    <p></p>
+    <input class="btn btn-primary" [disabled]="!rForm.valid" type="submit" name="add" />
+
+</form>
+<hr>
+<h3>Data saved for : </h3>
+{{savedMaterialData.id}} || {{savedMaterialData.name}}
+<hr>
+<h3>Observable of Ngrx</h3>
+{{success$ | async}}
