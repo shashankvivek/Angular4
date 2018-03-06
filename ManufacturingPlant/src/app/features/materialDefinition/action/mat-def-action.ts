@@ -1,11 +1,11 @@
 import { Action } from "@ngrx/store";
-import { IMaterialDefinitionState } from "app/features/materialDefinition/model/IMaterialDefinition";
+import { IMaterialDefinitionState, IMaterialDefinition } from "app/features/materialDefinition/model/IMaterialDefinition";
 
  
 
 export class MatDefAction implements Action{
     type : string;
-    payload : IMaterialDefinitionState
+    payload : IMaterialDefinition
 }
 
  export const ADD_MAT_DEF = '[MAT_DEF] ADD_MAT_DEF';
@@ -14,12 +14,12 @@ export class MatDefAction implements Action{
 
  export class add_mat_def implements MatDefAction{
      readonly type = ADD_MAT_DEF;
-     constructor(public payload:IMaterialDefinitionState){}
+     constructor(public payload:IMaterialDefinition){}
  }
 
  export class add_mat_def_success implements MatDefAction{
      readonly type = ADD_MAT_DEF_SUCCESS;
-     constructor(public payload: IMaterialDefinitionState){}
+     constructor(public payload: IMaterialDefinition){}
  }
 
  export type MaterialDefinitionActions

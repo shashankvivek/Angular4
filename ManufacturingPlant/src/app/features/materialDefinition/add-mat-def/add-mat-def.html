@@ -22,4 +22,4 @@
 {{savedMaterialData.id}} || {{savedMaterialData.name}}
 <hr>
 <h3>Observable of Ngrx</h3>
-{{success$ | async}}
+{{(success$ | async)?.material.name}}

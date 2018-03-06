@@ -7,6 +7,7 @@ import { MaterialDefService } from "app/features/materialDefinition/mat-def-svc"
 import { IMaterialDefinition, IMaterialDefinitionState } from "app/features/materialDefinition/model/IMaterialDefinition";
 import { Observable } from "rxjs/Observable";
 import { Store } from "@ngrx/store";
+import * as AllMatActions from "app/features/materialDefinition/action/mat-def-action";
 
 @Component({
     selector: 'add-mat-def',
@@ -56,6 +57,7 @@ export class AddMateriaDefComponent implements OnInit {
             .subscribe((success) => {
                 this.savedMaterialData = success;
                 this.formReset();
+                this.store.dispatch(new AllMatActions.add_mat_def(success));
             })
     }
 
