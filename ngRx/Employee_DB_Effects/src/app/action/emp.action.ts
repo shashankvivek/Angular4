@@ -1,6 +1,6 @@
 import { Action } from "@ngrx/store";
 
-export class MyAction implements Action{
+export interface MyAction extends Action{
     type : string;
     payload ? :any;
 }
