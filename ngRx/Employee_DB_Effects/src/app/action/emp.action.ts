@@ -23,7 +23,7 @@ export class fetch_emp_success implements MyAction{
 
 export class save_emp implements MyAction {
     readonly type = SAVE_EMP;
-    constructor(public payload?: any){}
+    constructor(public payload?: any){} 
 }
 
 export class save_emp_success implements MyAction{
