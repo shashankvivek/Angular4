@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavSvc } from 'app/nav-bar/nav-svc';
 import { ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
@@ -7,14 +6,14 @@ import { ChangeDetectionStrategy } from '@angular/core';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit {
+export class NavBarComponent {
 
-  NavData: any[];
-  constructor(public navSvc: NavSvc){}
+  // NavData: any[];
+  // constructor(public navSvc: NavSvc){}
 
-  ngOnInit() {
-    this.navSvc.getNavBarList()
-      .subscribe(nav => {this.NavData = nav});
-  }
+  // ngOnInit() {
+  //   // this.navSvc.getNavBarList()
+  //   //   .subscribe(nav => {this.NavData = nav});
+  // }
 
 }

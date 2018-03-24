@@ -1,12 +1,12 @@
 { 
-  "navList": [
+  "featureList": [
     {
-      "id": "cat1",
+      "id": "f1",
 	  "route" : "matdef",
       "name": "Material Definition"
     },
     {
-      "id": "cat2",
+      "id": "f2",
 	  "route" : "proc",
       "name": "Process"
     }
