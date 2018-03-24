@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
+import { LoginSvc } from '../auth/login.svc';
 
 @Component({
   selector: 'nav-bar',
@@ -9,7 +10,11 @@ import { ChangeDetectionStrategy } from '@angular/core';
 export class NavBarComponent {
 
   // NavData: any[];
-  // constructor(public navSvc: NavSvc){}
+  constructor(private loginSvc: LoginSvc){}
+
+  logout() {
+    this.loginSvc.logout();
+  }
 
   // ngOnInit() {
   //   // this.navSvc.getNavBarList()

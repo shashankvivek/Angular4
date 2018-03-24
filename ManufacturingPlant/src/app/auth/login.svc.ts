@@ -21,5 +21,6 @@ export class LoginSvc{
     logout(){
         this.user = "";
         this.pwd = "";
+        this.router.navigate(['/login']);
     }
 }

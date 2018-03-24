@@ -23,7 +23,7 @@ import { LoginSvc } from './auth/login.svc';
 // ];
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent, LoginComponent],
+  declarations: [AppComponent, WelcomeComponent, LoginComponent,NavBarComponent],
   imports: [
     BrowserModule,
     FormsModule,

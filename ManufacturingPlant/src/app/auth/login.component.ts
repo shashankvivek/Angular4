@@ -17,6 +17,6 @@ export class LoginComponent {
     }
 
     loginUser(formData: any){
-        this.loginSvc.doLogin(formData.email,formData.pwd);
+        this.loginSvc.doLogin(formData.email, formData.pwd);
     }
 }
