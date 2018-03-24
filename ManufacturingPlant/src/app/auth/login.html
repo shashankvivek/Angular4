@@ -1,0 +1,20 @@
+<h2>Login</h2>
+  <form [formGroup]="rForm" (ngSubmit)="loginUser(rForm.value)">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" 
+        placeholder="Enter email" 
+        name="email"
+        formControlName="email">
+      <p *ngIf="(rForm.controls['email'].touched && !rForm.controls['email'].valid)">Invalid choice</p>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" 
+        placeholder="Enter password" 
+        name="pwd"
+        formControlName="pwd">
+        <p *ngIf="rForm.controls['pwd'].touched && !rForm.controls['pwd'].valid">Invalid pwd</p>
+    </div>
+    <button type="submit" [disabled]="!rForm.valid" class="btn btn-default">Submit</button>
+  </form>

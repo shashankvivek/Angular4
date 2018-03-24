@@ -12,6 +12,9 @@ import { MaterialDefModule } from 'app/features/materialDefinition/material-def-
 import { WelcomeComponent } from 'app/welcome-comp/welcome-comp';
 import { AppRootRouting } from './routing';
 import { FeatureListSvc } from './welcome-comp/featureList-svc';
+import { LoginComponent } from './auth/login.component';
+import { AuthGuardSvc } from './auth/AuthGuard.svc';
+import { LoginSvc } from './auth/login.svc';
 
 // const routes = [
 //   {path : '', redirectTo: 'index', pathMatch: 'full'},
@@ -20,16 +23,15 @@ import { FeatureListSvc } from './welcome-comp/featureList-svc';
 // ];
 
 @NgModule({
-  declarations: [AppComponent,NavBarComponent,WelcomeComponent],
+  declarations: [AppComponent, WelcomeComponent, LoginComponent],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
     AppRootRouting,
-    StoreModule.forRoot({})
   ],
-  providers: [FeatureListSvc],
+  providers: [FeatureListSvc, LoginSvc,AuthGuardSvc],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
