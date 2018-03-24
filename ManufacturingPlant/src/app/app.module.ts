@@ -15,6 +15,8 @@ import { FeatureListSvc } from './welcome-comp/featureList-svc';
 import { LoginComponent } from './auth/login.component';
 import { AuthGuardSvc } from './auth/AuthGuard.svc';
 import { LoginSvc } from './auth/login.svc';
+import { HomeComponent } from './home/home.component';
+import { CommonSharedModule } from './common/common.module';
 
 // const routes = [
 //   {path : '', redirectTo: 'index', pathMatch: 'full'},
@@ -23,15 +25,15 @@ import { LoginSvc } from './auth/login.svc';
 // ];
 
 @NgModule({
-  declarations: [AppComponent, WelcomeComponent, LoginComponent,NavBarComponent],
+  declarations: [AppComponent, WelcomeComponent, LoginComponent,NavBarComponent, HomeComponent],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRootRouting,
+    AppRootRouting
   ],
-  providers: [FeatureListSvc, LoginSvc,AuthGuardSvc],
+  providers: [FeatureListSvc, LoginSvc, AuthGuardSvc],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

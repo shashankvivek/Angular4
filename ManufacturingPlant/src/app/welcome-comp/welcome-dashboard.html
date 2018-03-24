@@ -1,5 +1,8 @@
-<nav-bar></nav-bar>
+
 <h1>Welcome To Maufacturing Plant</h1>
-<button [routerLink]="feature.route" style="margin-left: 10px;width: 200px" class="btn btn-primary" *ngFor="let feature of FeatureList$">
+{{FeatureList$}}
+<button [routerLink]="feature.route" style="margin-left: 10px;width: 200px" 
+    class="btn btn-primary" 
+    *ngFor="let feature of FeatureList">
     {{feature.name}}
 </button>

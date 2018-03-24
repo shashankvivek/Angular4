@@ -10,12 +10,12 @@ import { FeatureProperty } from './feature.model';
 
 export class WelcomeComponent implements OnInit{
 
-    FeatureList$: FeatureProperty[];
+    FeatureList: FeatureProperty[];
 
     constructor(private featureSvc: FeatureListSvc){}
 
     ngOnInit() {
         this.featureSvc.getFeatureList()
-            .subscribe( data => this.FeatureList$ = data);
+            .subscribe( data => {this.FeatureList = data});
     }
 }
