@@ -1,20 +1,28 @@
-{ 
+{
   "featureList": [
     {
       "id": "f1",
-	  "route" : "matdef",
+      "route": "matdef",
       "name": "Material Definition"
     },
     {
       "id": "f2",
-	  "route" : "proc",
+      "route": "proc",
       "name": "Process"
     }
   ],
-  "material_definition":[
-	{
-		"id": 1,
-		"name" : "Some Material Definition"
-	}
+  "process_list": [
+    {
+      "id": "p1",
+      "name": "Process_1",
+      "final_material": "Final Mat 1",
+      "revision": "A"
+    },
+    {
+      "id": "p2",
+      "name": "Process_2",
+      "final_material": "Final Mat 2",
+      "revision": "A"
+    }
   ]
 }

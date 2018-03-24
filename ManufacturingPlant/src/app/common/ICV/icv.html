@@ -1,1 +1,9 @@
-ICV HTML
+<div class="row icv">
+    <div (click)="selection(data)" [ngClass]="{'selection': selectedItemId == data.id}" *ngFor="let data of dataList" class="col-sm-3 icv-grid">
+        <b>{{config.fields.title}}</b> : {{data[config.fields.title]}}
+        <br>
+        <div *ngFor="let prop of config.fields.body">
+            <div>{{prop.name}} : {{data[prop.field]}}</div>
+        </div>
+    </div>
+  </div>

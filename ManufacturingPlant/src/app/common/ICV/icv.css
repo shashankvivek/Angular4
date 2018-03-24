@@ -1,0 +1,15 @@
+.icv-grid{
+    margin-right: 5px;
+    background-color:lavender;
+    padding: 4px 15px;
+    height: 100px;
+}
+
+.selection{
+    background-color:cornflowerblue;
+}
+
+.icv{
+    border: 1px solid grey;
+    padding: 28px 20px;
+}
