@@ -25,11 +25,11 @@ export class ProcessListComponent implements OnInit {
                 ]
             },
             selectionChanged : this.selectionChangeDetection
-        }
+        };
     }
 
     selectionChangeDetection = (item) => {
-        console.log(item)
+        console.log(item);
     }
 
     // Use of arrow because : https://stackoverflow.com/questions/49466085/this-variable-get-lost-when-passing-a-function-from-parent-to-child-component
