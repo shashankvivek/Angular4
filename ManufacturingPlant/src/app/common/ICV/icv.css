@@ -1,8 +1,9 @@
 .icv-grid{
     margin-right: 5px;
-    background-color:lavender;
-    padding: 4px 15px;
-    height: 100px;
+    background-color: lavender;
+    padding: 3px 14px;
+    height: 110px;
+    margin-top: 8px;
 }
 
 .selection{

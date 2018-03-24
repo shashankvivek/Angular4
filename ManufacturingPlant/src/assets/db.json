@@ -23,6 +23,18 @@
       "name": "Process_2",
       "final_material": "Final Mat 2",
       "revision": "A"
+    },
+    {
+      "id": "p3",
+      "name": "Process_3",
+      "final_material": "Final Mat 3",
+      "revision": "A"
+    },
+    {
+      "id": "p4",
+      "name": "Process_4",
+      "final_material": "Final Mat 4",
+      "revision": "A"
     }
   ]
 }
