@@ -1,0 +1,28 @@
+md-grid-tile {
+  background-size: contain;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  cursor: pointer;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+
+  border: 1px solid #c2185b;
+}
+
+md-grid-tile:hover, md-grid-tile.selected {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -webkit-transform: scale(0.99);
+  -moz-transform: scale(0.99);
+  -ms-transform: scale(0.99);
+  -o-transform: scale(0.99);
+  transform: scale(0.99);
+  z-index: 1;
+  -webkit-box-shadow: inset 0 0 30px 30px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 0 30px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 30px 30px rgba(0, 0, 0, 0.5);
+}

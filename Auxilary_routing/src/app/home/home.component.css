@@ -1,0 +1,21 @@
+.card-wrapper {
+  text-align: center;
+}
+
+md-card {
+  max-width: 550px;
+  padding: 0;
+  display: inline-block;
+}
+
+md-card-content {
+  padding: 0 24px 24px;
+}
+
+img {
+  border-bottom: 5px solid #c2185b;
+}
+
+md-card-actions {
+  margin: 0 !important;
+}

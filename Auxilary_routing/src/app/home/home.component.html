@@ -1,0 +1,20 @@
+<div class="card-wrapper">
+  <md-card>
+    <img
+      width="100%"
+      src="/assets/nodes.png"
+      alt="">
+    <md-card-content>
+      <md-card-title>Welcome to Angular 2 Named Router Outlets</md-card-title>
+      <md-card-subtitle>
+        Select a route above or click the button below to see what different router-outlets produce.
+      </md-card-subtitle>
+      <md-card-actions>
+        <button md-raised-button class="md-primary"
+          [routerLink]="['/speakers', {outlets: {list: ['speakersList'], bio: ['none']}}]">
+          Speakers
+        </button>
+      </md-card-actions>
+    </md-card-content>
+  </md-card>
+</div>
