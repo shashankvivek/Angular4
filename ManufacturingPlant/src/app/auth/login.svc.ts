@@ -14,13 +14,13 @@ export class LoginSvc{
         this.pwd = pwd;
         this.router.navigate(['/home']);
     }
-    validateLogin(): boolean{
+    validateLogin(): boolean {
         return (this.user === 'test' && this.pwd === 'test');
     }
 
     logout(){
-        this.user = "";
-        this.pwd = "";
+        this.user = '';
+        this.pwd = '';
         this.router.navigate(['/login']);
     }
 }

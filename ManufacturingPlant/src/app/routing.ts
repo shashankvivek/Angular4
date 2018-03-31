@@ -15,7 +15,8 @@ const rootRouter: Routes = [
             {path: '', component : WelcomeComponent},
             {path: 'proc' , loadChildren: './features/process/process.module#ProcessModule'}
         ]
-    }
+    },
+    {path : '**' , redirectTo : 'home'}
 ];
 
 export const AppRootRouting: ModuleWithProviders = RouterModule.forRoot(rootRouter);
