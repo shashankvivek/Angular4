@@ -1,7 +1,19 @@
 <div class="container">
   <hr>
   <h3>Example 1</h3>
-  <h4 class="underline">Color change on selection</h4>
+  <h4 class="underline">Attribute Directive</h4>
   <button class="btn" highlight msg="User">Hello</button>
   <hr>
+  <h3>Example 2</h3>
+  <h4 class="underline">Structural Directive</h4>
+  <ng-container *ngFor="let item of [2,4,6,8,10]">
+      <span *appDelay="500 * item">{{item}} ,</span>
+  </ng-container>
+  <hr>
+  <h3>Example 3</h3>
+  <h4 class="underline">ngTemplateOutlet</h4>
+  <ng-template #mytemplate>
+    This is a temlate data rendered from <i>ng-template</i> using <b><i>ngTemplateOutlet</i></b>
+  </ng-template>
+  <ng-container *ngTemplateOutlet="mytemplate"></ng-container>
 </div>
