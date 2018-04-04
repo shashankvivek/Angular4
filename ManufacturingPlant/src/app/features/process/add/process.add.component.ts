@@ -8,12 +8,16 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 export class ProcessAddComponent{
 
     addForm: FormGroup;
+    revisionList: string[] = [ 'A', 'B'];
     constructor(private fb: FormBuilder ){
-        this.addForm = fb.group({
-            'id' : [null, Validators.required],
-            'name' : [null, Validators.compose([Validators.required,Validators.minLength(3)])],
-            'final_mat': [],
-            'rev' : []
-        })
+        this.addForm = this.fb.group({
+            'id'    : ['', Validators.required],
+            'name'  : ['', Validators.compose([Validators.required,Validators.minLength(3)])],
+            'revision': ['',Validators.required]
+        });
+    }
+
+    submitForm(formData){
+        console.log(formData)
     }
 }

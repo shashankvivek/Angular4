@@ -21,6 +21,14 @@
           Select a gender
         </div>
 
+        <label>Url:
+          <input type="text" formControlName="url" />
+        </label>
+        <div class="alert" *ngIf="!rForm.get('url').valid && rForm.get('url').touched">
+          <div *ngIf="rForm.get('url').errors.inValidUrl; else https">The url must be secure i.e. "https"</div>
+          <ng-template #https>Required field</ng-template>
+        </div>
+
         <label>Breed :
           <input type="radio" value="human" formControlName="breed"> Human
           <input type="radio" value="alien" formControlName="breed"> Alien
@@ -31,7 +39,7 @@
 
         <label>Activities :
           <span *ngFor="let data of activityList">
-            <input type="checkbox" (change)="onChange(data,$event.target.checked)" [checked]="isChecked(data)"/> {{data.type}}
+            <input type="checkbox" (change)="onActivityChange(data,$event.target.checked)" [checked]="isActivityChecked(data)" /> {{data.type}}
           </span>
         </label>
         <div class="alert" *ngIf="!rForm.controls['activities'].valid && rForm.controls['activities'].touched">
@@ -47,7 +55,7 @@
         </div>
 
         <label for="validate">Minimum of 3 Characters for Name</label>
-        <input type="checkbox" name="validate" formControlName="validate" value="1"> On
+        <input type="checkbox" name="validate" formControlName="validateName" value="true"> On
 
         <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
         <hr> {{rForm.value | json}}

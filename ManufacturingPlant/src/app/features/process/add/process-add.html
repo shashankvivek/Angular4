@@ -1,22 +1,23 @@
 <h2>Add Process</h2>
-  <form >
-    <div class="form-group">
-      <label for="idd">Id:</label>
-      <input type="text" class="form-control" id="idd" 
-        placeholder="Enter Id">
-    </div>
-    <div class="form-group">
-      <label for="name">name:</label>
-      <input type="text" class="form-control" id="name" 
-        placeholder="Enter Name">
-    </div>
-    <div class="form-group">
-        <label for="fmat">Final Material:</label>
-        <input type="text" class="form-control" id="fmat" 
-          placeholder="Enter Material">
-      </div>
-      <div class="form-group">
-        <label for="revision">Revision:</label>
-      </div>
-    <button type="submit" class="btn btn-default">Save</button>
-  </form>
+<form [formGroup]="addForm" (ngSubmit)="submitForm(addForm.value)">
+  <div class="form-group">
+    <label for="idd">Id:</label>
+    <input type="text" class="form-control" id="idd" placeholder="Enter Id" formControlName="id">
+    <p *ngIf="!addForm.controls['id'].valid && addForm.controls['id'].touched">Please provide value</p>
+  </div>
+  <div class="form-group">
+    <label for="name">name:</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter Name" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label for="fmat">Final Material:</label>
+    <input type="text" class="form-control" id="fmat" placeholder="Enter Material">
+  </div>
+  <div class="form-group">
+    <label for="revision">Revision:</label>
+    <select formControlName="revision">
+      <option *ngFor="let rev of revisionList" [ngValue]="rev">{{rev.type}}</option>
+    </select>
+  </div>
+  <button type="submit" [disabled]="!addForm.valid" class="btn btn-default">Save</button>
+</form>

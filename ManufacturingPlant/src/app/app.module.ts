@@ -18,12 +18,6 @@ import { LoginSvc } from './auth/login.svc';
 import { HomeComponent } from './home/home.component';
 import { CommonSharedModule } from './common/common.module';
 
-// const routes = [
-//   {path : '', redirectTo: 'index', pathMatch: 'full'},
-//   {path: 'matdef', loadChildren: './features/materialDefinition/material-def-module#MaterialDefModule'},
-//   {path: 'index', component: WelcomeComponent}
-// ];
-
 @NgModule({
   declarations: [AppComponent, WelcomeComponent, LoginComponent,NavBarComponent, HomeComponent],
   imports: [
