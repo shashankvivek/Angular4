@@ -1,9 +1,9 @@
-import { Routes, RouterModule } from "@angular/router";
-import { WelcomeComponent } from "./welcome-comp/welcome-comp";
-import { ModuleWithProviders } from "@angular/core";
-import { LoginComponent } from "./auth/login.component";
-import { AuthGuardSvc } from "./auth/AuthGuard.svc";
-import { HomeComponent } from "./home/home.component";
+import { Routes, RouterModule } from '@angular/router';
+import { WelcomeComponent } from './welcome-comp/welcome-comp';
+import { ModuleWithProviders } from '@angular/core';
+import { LoginComponent } from './auth/login.component';
+import { AuthGuardSvc } from './auth/AuthGuard.svc';
+import { HomeComponent } from './home/home.component';
 
 
 

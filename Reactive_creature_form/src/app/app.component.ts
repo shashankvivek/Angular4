@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray, FormControl, AbstractControl } from '@angular/forms';
 
+//https://alligator.io/angular/reactive-forms-formarray-dynamic-fields/ 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
 
+export class AppComponent {
   rForm: FormGroup;
   post: any;
   description: string = '';
