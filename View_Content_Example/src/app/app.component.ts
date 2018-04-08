@@ -16,6 +16,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChildren(AlertComponent, {read : ViewContainerRef}) alertCompContainerList: QueryList<AlertComponent>;
 
   ngAfterViewInit() {
+    console.log('================== ViewChild & ViewChildren Example ==========================');
     this.alertCompList.forEach( instance => console.log(instance))
     console.log('============================');
     console.log(this.alertComp);
