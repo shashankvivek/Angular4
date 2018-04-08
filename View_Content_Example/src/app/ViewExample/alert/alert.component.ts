@@ -14,5 +14,4 @@ export class AlertComponent {
     alert(this.type);
   }
 
-  
 }

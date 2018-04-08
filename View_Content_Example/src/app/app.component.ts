@@ -1,5 +1,5 @@
 import { Component, AfterViewInit, ViewChildren, QueryList, ViewChild, ElementRef, ViewContainerRef } from '@angular/core';
-import { AlertComponent } from './alert/alert.component';
+import { AlertComponent } from './ViewExample/alert/alert.component';
 
 @Component({
   selector: 'app-root',
