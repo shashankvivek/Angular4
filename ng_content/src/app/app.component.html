@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>Ng-Content</h1>
+  <div style="border:1px solid grey;padding: 5px 5px">
+    <h2>Example-1</h2>
+    <board>
+      <h4 style="text-align: center" board-header>
+        I am Header
+      </h4>
+
+      <div style="border:1px solid grey;padding: 5px 5px" board-body>
+        I am the body of the `content` that has been inserted using `ng-conten`
+      </div>
+
+      <div style="text-align: center">
+        I am something which hasn't been mapped to any
+        <u>ng-content</u>
+      </div>
+    </board>
+  </div>
+  <hr>
+  <div style="border:1px solid grey;padding: 5px 5px">
+    <h2>Example-2</h2>
+    <i style="color: darkred">The sequence of DOM elements in <b>app.component.html</b> is different from 
+          what is being rendered. Chech <b>board2.component.html</b></i>      
+    <board2>
+      <div style="text-align: center">
+        I am something which hasn't been mapped to any
+        <u>ng-content</u>
+      </div>
+
+      <div style="border:1px solid grey;padding: 5px 5px" board2 body>
+        I am the body of the `content` that has been inserted using `ng-content`
+      </div>
+
+      <h4 style="text-align: center" board2 header>
+        I am Header of Ex-2
+      </h4>
+
+
+
+    </board2>
+  </div>
+
+
+</div>

@@ -1,0 +1,1 @@
+An exmaple to understand `ng-connten` of angular

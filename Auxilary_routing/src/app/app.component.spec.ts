@@ -14,7 +14,7 @@ describe('App: Ng2NamedRoutes', () => {
 
   it('should create the app', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
-    let app = fixture.debugElement.componentInstance;
+    let app = fixture.componentInstance;
     expect(app).toBeTruthy();
   }));
 
