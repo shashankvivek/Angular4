@@ -10,6 +10,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
     template: `
     <div class="container" *ngIf="isVisible">Hi there!</div>
     <button (click)="isVisible = !isVisible">toggle</button>
+    <div id="overlay" style="display: none"></div>
   `
 })
 class DomTestingComponent {
@@ -43,6 +44,11 @@ describe('DomTestingComponent', () => {
     it('should remove DOM when false', () => {
         let containerElement = fixture.debugElement.query(By.css('.container'));
         expect(containerElement).toBeNull();
+    })
+
+    it('should not display id "overlay"', () => {
+        let containerElement = fixture.debugElement.query(By.css('#overlay')).nativeElement.style.display;
+        expect(containerElement).toBe('none');
     })
 
     it('should render DOM when true', () => {
