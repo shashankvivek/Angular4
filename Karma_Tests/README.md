@@ -1,1 +1,1 @@
-An exmaple to understand `ng-connten` of angular
+Some examples of `karma Test` cases
