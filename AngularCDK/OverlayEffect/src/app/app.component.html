@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">Welcome</mat-toolbar>
+
+<mat-list>
+  <mat-list-item *ngFor="let file of files">
+    <mat-icon mat-list-icon>insert_drive_file</mat-icon>
+    {{ file.name }}
+    <button mat-icon-button (click)="showPreview()">
+      <mat-icon mat-list-icon>visibility</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
