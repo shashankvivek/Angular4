@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { FilePreviewOverlayRef } from './file-preview-overlay-ref';
+import { FILE_PREVIEW_DIALOG_DATA } from './file-preview-overlay.tokens';
 
 @Component({
   selector: 'app-file-preview-overlay',
@@ -17,7 +19,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilePreviewOverlayComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: FilePreviewOverlayRef,
+    @Inject(FILE_PREVIEW_DIALOG_DATA) public image: any) { }
 
   ngOnInit() {
   }
