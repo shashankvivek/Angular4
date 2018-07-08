@@ -27,3 +27,6 @@ import { Overlay, OverlayModule } from '@angular/cdk/overlay';
   entryComponents : [FilePreviewOverlayComponent]
 })
 export class AppModule { }
+
+
+// https://blog.thoughtram.io/angular/2017/11/20/custom-overlays-with-angulars-cdk.html
