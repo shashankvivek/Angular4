@@ -1,0 +1,13 @@
+// /* You can add global styles to this file, and also import other style files */
+// @import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import url( 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  &.dark-backdrop {
+    background: #000;
+    opacity: 0.85 !important;
+  }
+}

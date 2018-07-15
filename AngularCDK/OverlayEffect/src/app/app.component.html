@@ -4,7 +4,7 @@
   <mat-list-item *ngFor="let file of files">
     <mat-icon mat-list-icon>insert_drive_file</mat-icon>
     {{ file.name }}
-    <button mat-icon-button (click)="showPreview()">
+    <button mat-icon-button (click)="showPreview(file)">
       <mat-icon mat-list-icon>visibility</mat-icon>
     </button>
   </mat-list-item>
