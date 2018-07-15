@@ -5,7 +5,7 @@ import { MatToolbarModule, MatListModule, MatIconModule, MatButtonModule } from 
 import { AppComponent } from './app.component';
 import { FilePreviewOverlayComponent } from './file-preview-overlay/file-preview-overlay.component';
 import { CommonModule } from '@angular/common';
-import { FilePreviewOverlayService } from './file-preview-overlay.service';
+import { FilePreviewOverlayService } from './file-preview-overlay/file-preview-overlay.service';
 import { Overlay, OverlayModule } from '@angular/cdk/overlay';
 
 
@@ -27,6 +27,3 @@ import { Overlay, OverlayModule } from '@angular/cdk/overlay';
   entryComponents : [FilePreviewOverlayComponent]
 })
 export class AppModule { }
-
-
-// https://blog.thoughtram.io/angular/2017/11/20/custom-overlays-with-angulars-cdk.html

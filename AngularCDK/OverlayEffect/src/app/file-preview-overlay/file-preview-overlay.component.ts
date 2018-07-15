@@ -19,8 +19,7 @@ import { FILE_PREVIEW_DIALOG_DATA } from './file-preview-overlay.tokens';
 })
 export class FilePreviewOverlayComponent implements OnInit {
 
-  constructor(public dialogRef: FilePreviewOverlayRef,
-    @Inject(FILE_PREVIEW_DIALOG_DATA) public image: any) { }
+  constructor() { }
 
   ngOnInit() {
   }

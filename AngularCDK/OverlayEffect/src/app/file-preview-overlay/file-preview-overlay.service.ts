@@ -50,7 +50,7 @@ export class FilePreviewOverlayService {
     });
     /**
      * From here we could take it one step further and also close the overlay when a user naviagtes back in the browser history.
-     *  For our application, however, this doesn’t make much sense because we are not using the router and there’s only one page 
+     *  For our application, however, this doesn’t make much sense because we are not using the router and there’s only one page
      *  that we render out to the screen.
      *  But feel free to give it a shot! Hint: use the Location service and subscribe to the browser’s popState events.
      */

@@ -24,6 +24,6 @@ export class AppComponent {
 
     setTimeout(() => {
       dialogRef.close();
-    }, 2000)
+    }, 2000);
   }
 }
